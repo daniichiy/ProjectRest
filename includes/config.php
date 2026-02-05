@@ -1,8 +1,9 @@
 <?php
+$config = require __DIR__ . '/../dbconfig.php';
 
-$db_user = 'root';
-$db_password = 'dbtestes123@';
-$db_name = 'phprest';
+$db_user = $config['user'];
+$db_password = $config['password'];
+$db_name = $config['db_name'];
 
 $db = new PDO('mysql:host=127.0.0.1;dbname='.$db_name.';charset=utf8',$db_user,$db_password);
 
